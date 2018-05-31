@@ -1,0 +1,16 @@
+{
+    "enabled": 1,
+    "hidden": false,
+    "description": "Jobsets",
+    "nixexprinput": "ieleSrc",
+    "nixexprpath": "jobsets/default.nix",
+    "checkinterval": 300,
+    "schedulingshares": 20,
+    "enableemail": true,
+    "emailoverride": "",
+    "keepnr": 3,
+    "inputs": {
+        "ieleSrc": { "type": "git", "value": "https://github.com/krisajenkins/iele-semantics.git nixify", "emailresponsible": false },
+        "nixpkgs": { "type": "git", "value": "https://github.com/NixOS/nixpkgs-channels.git nixos-18.03", "emailresponsible": false }
+    }
+}
