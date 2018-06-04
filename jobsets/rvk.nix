@@ -26,5 +26,5 @@ pkgs.stdenv.mkDerivation {
     cp -pr lib $lib
     cp -pr include $include
     cp -pr documentation $documentation
-  ';
+  '';
 }
