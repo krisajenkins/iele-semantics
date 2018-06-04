@@ -17,13 +17,8 @@ pkgs.stdenv.mkDerivation {
     mvn -Dmaven.repo.local=$HOME/.m2 package
   '';
 
-  # installPhase = ''
-  #   cd k-distribution/target/release/k
-  #   mkdir $bin $lib $include $documentation
-  #   cp -pr bin $bin
-  #   cp -pr lib $lib
-  #   cp -pr include $include
-  #   cp -pr documentation $documentation
-  # '';
-  outputBin = "k-distribution/target/release/k/bin";
+  installPhase = ''
+    mkdir $out
+    cp -pr k-distribution/target/release/k/* $out
+  '';
 }
