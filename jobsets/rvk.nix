@@ -13,6 +13,8 @@ pkgs.stdenv.mkDerivation {
     export HOME="$NIX_BUILD_TOP"
   '';
 
+  outputs = [ "bin" "lib" "include" "documentation" ];
+
   buildPhase = ''
     mvn -Dmaven.repo.local=$HOME/.m2 package
   '';
