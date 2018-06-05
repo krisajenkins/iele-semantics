@@ -2,7 +2,6 @@
 , autoconf
 , automake
 , libtool
-, secp256k1
 , maven
 , stack
 , perl
@@ -32,7 +31,7 @@ stdenv.mkDerivation {
   requiredSystemFeatures = [ "ubuntu" ];
   src = ieleSrc;
 
-  buildInputs = [ autoconf automake libtool secp256k1 maven stack perl flex git gcc opam ocaml pandoc curl rsync unzip which pkgconfig zlib ncurses z3 mpfr gmp openjdk8 python2 ];
+  buildInputs = [ autoconf automake libtool maven stack perl flex git gcc opam ocaml pandoc curl rsync unzip which pkgconfig zlib ncurses z3 mpfr gmp openjdk8 python2 ];
 
   patches = [ ./iele-spaces.patch ];
 
