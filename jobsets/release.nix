@@ -14,8 +14,8 @@ rec {
   rvk = callPackage ./rvk.nix {
     inherit rvkSrc;
   };
-  ocaml_4_03_k = callPackage ./ocaml.nix {
-    inherit rvk;
+  ocamlWithK = callPackage ./ocaml-with-k.nix {
+    inherit rvkSrc;
   };
   iele = callPackage ./iele.nix {
     inherit ieleSrc;
