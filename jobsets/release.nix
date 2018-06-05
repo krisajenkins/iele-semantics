@@ -16,5 +16,6 @@ rec {
   };
   iele = callPackage ./iele.nix {
     inherit ieleSrc;
+    inherit secp256k1;
   };
 }
